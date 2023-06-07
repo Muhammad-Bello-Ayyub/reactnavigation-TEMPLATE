@@ -1,0 +1,28 @@
+// {
+//   "services": [
+//     {
+//        "id":1,
+//        "title":"Easy to Use",
+//        "description":"Start quickly with built-in navigators that deliver a seamless out-of-the-box experience.",
+//        "img": "https://reactnavigation.org/img/home_smile.svg"
+//     },
+//     {
+//        "id":2,
+//        "title":"Components built for iOS and Android",
+//        "description":"Platform-specific look-and-feel with smooth animations and gestures.",
+//        "img": "https://reactnavigation.org/img/home_devices.svg"
+//     },
+//     {
+//        "id":3,
+//        "title":"Completely customizable",
+//        "description":"If you know how to write apps using JavaScript you can customize any part of React Navigation.",
+//        "img": "https://reactnavigation.org/img/home_star.svg"
+//     },
+//     {
+//        "id":4,
+//        "title":"Extensible platform",
+//        "description":"React Navigation is extensible at every layer— you can write your own navigators or even replace the user-facing API.",
+//        "img": "https://reactnavigation.org/img/home_extend.svg"
+//     }
+//  ]
+// }
