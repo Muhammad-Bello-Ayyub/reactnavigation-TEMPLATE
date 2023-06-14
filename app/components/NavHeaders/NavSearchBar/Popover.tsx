@@ -19,7 +19,7 @@ function XmPopover() {
         <Box display={{ base:'flex', md:'none' }} mr={{ base:'2em', md:'0' }}>
           <Popover placement={'top-start'}>
             <PopoverTrigger>
-              <IconButton aria-label='search icon' borderRadius={'full'} size={'xs'} bg='gray.900' colorScheme='transparent'>
+              <IconButton aria-label='search icon' borderRadius={'full'} size={'xs'} bg='#000' colorScheme='transparent'>
                 <Center>
                   <Box>
                     <SearchIcon boxSize={'3'}/>

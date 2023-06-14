@@ -22,12 +22,9 @@ function NavLinks() {
     <>
       <Links />
 
-      <Box display={{ base:'none', md:'flex' }} pl={2} color="#fefefe">
+      <Box display={{ base:'none', md:'flex' }} color="#fefefe">
         <Menu>
-          <MenuButton
-            px={1}
-            py={2}
-          >
+          <MenuButton>
             7.x <ChevronDownIcon />
           </MenuButton>
           <MenuList minWidth='240px' _expanded={{ bg: 'blackAlpha.400' }}>
@@ -46,7 +43,7 @@ function NavLinks() {
 
       <Box color="#fefefe" p='2' gap={0.3} display={{ base:'none', md:'inline-list-item' }}  alignItems={'center'}>
         <Box>
-          <Link as={NextLink} href='https://github.com' isExternal>
+          <Link as={NextLink} href='https://github.com/react-navigation' isExternal>
             GitHub <ExternalLinkIcon mx='2px'/>
           </Link>
         </Box>

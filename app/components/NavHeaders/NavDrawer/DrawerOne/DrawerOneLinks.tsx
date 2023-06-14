@@ -41,10 +41,10 @@ function DrawerOneLinks() {
                 
                 <Menu>
                     <MenuButton>
-                        Verions<ChevronRightIcon ml={'50vw'} />
+                        Verions<ChevronRightIcon mx={'2em'} />
                     </MenuButton>
-                        <MenuList minWidth='240px' _expanded={{ bg: 'blackAlpha.400' }}>
-                        <MenuItem >6.x</MenuItem>
+                    <MenuList minWidth='240px'>
+                        <MenuItem>6.x</MenuItem>
                         <MenuItem >5.x</MenuItem>
                         <MenuItem >4.x</MenuItem>
                         <MenuItem >3.x</MenuItem>

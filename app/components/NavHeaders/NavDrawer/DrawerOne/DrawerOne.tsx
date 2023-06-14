@@ -33,23 +33,23 @@ function DrawerOne() {
                     <MenuButton
                         as={IconButton}
                         aria-label='Options'
-                        icon={<HamburgerIcon color={'white'}/>}
+                        icon={<HamburgerIcon color={'white'} boxSize={25}/>}
                         variant='unstyled'
                         ref={btnRef} 
                         onClick={onOpen}
                     />
 
                     <Drawer
-                        size={'xs'}
+                        size={'sm'}
                         isOpen={isOpen}
-                        placement='right'
+                        placement='left'
                         onClose={onClose}
                         finalFocusRef={btnRef}
                         colorScheme='blue'
                     >
                         <DrawerOverlay />
                         
-                        <DrawerContent>
+                        <DrawerContent bg='#1b1b1d' color={'#fefefe'}>
                             <DrawerCloseButton />
                             <DrawerHeader display={'inline-list-item'} alignItems={'center'}>
                                 <Box display={'inline-list-item'} alignItems={'center'}>
