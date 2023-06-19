@@ -15,10 +15,10 @@ function help() {
           </Box>
           <Box>
             <Text>
-              If you've encountered a bug with React Navigation,
+              If you&apos;ve encountered a bug with React Navigation,
               please <Link href="https://github.com/react-navigation/react-navigation/issues" color={'#a697ce'}>post an issue</Link> and be sure to fill out the issue template. 
               If you believe there is a feature missing, please <Link href="https://react-navigation.canny.io/feature-requests" color={'#a697ce'}>create a feature request
-              on Canny</Link>, or if you're feeling up for the task of proposing an API for the 
+              on Canny</Link>, or if you&apos;re feeling up for the task of proposing an API for the 
               feature, <Link href="https://github.com/react-navigation/rfcs" color={'#a697ce'}>submit a RFC!</Link> If you just need some help, try joining us in the  
               <span className={styles.span}> react-navigation</span> channel on <Link href="https://discord.gg/4xEK3nD" color={'#a697ce'}>Discord</Link> or 
               <Link href="https://stackoverflow.com/questions/tagged/react-navigation" color={'#a697ce'}> post a question to StackOverflow.</Link>
