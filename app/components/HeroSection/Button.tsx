@@ -1,3 +1,5 @@
+'use client'
+
 import { Button, Center, Flex, } from "@chakra-ui/react";
 
 function Buttons() {
