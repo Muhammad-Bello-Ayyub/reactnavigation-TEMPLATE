@@ -30,8 +30,15 @@ const ScrollToTopButton = () => {
 
   return (
     <Box position="fixed" bottom="4" right="4" opacity={showButton ? 1 : 0} transition="opacity 0.3s">
-      <Button colorScheme="blue" size="sm" leftIcon={<FaArrowUp />} onClick={handleClick}>
-        Back to Top
+      <Button
+        w='50px'
+        h='50px' 
+        alignItems='center'
+        colorScheme="blue" 
+        borderRadius={'full'}
+        onClick={handleClick}
+        >  
+        {<FaArrowUp size={'30px'}/>}   
       </Button>
     </Box>
   );

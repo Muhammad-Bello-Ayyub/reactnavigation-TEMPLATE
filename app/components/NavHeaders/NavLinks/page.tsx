@@ -7,16 +7,23 @@ import {
   Spacer,
   MenuItem,
   MenuList,
-  MenuButton,
-  IconButton, 
+  MenuButton, 
+  useColorMode, 
+  useColorModeValue
 } from '@chakra-ui/react';
 import Links from './Links';
 import NextLink from "next/link"
-import { FaRegMoon } from "react-icons/fa";
+import { useState } from "react";
+import { IoSunny, IoMoon } from "react-icons/io5";
 import { ChevronDownIcon, ExternalLinkIcon, } from '@chakra-ui/icons';
 
 
 function NavLinks() {
+
+  const {toggleColorMode} = useColorMode();
+  const [toggle, setToggle] = useState(false);
+
+  const formBackground = useColorModeValue("gray.100", "gray.700");
 
   return (
     <>
@@ -47,12 +54,14 @@ function NavLinks() {
             GitHub <ExternalLinkIcon mx='2px'/>
           </Link>
         </Box>
-        <Box>
-          <IconButton
-            aria-label='toggle color mode'
-            colorScheme='transparent'
-            icon={<FaRegMoon color='white' size={20}/>}
-          />
+        <Box
+          px={5}
+          onClick={() =>{
+            toggleColorMode();
+            setToggle(!toggle);}}
+          cursor={"pointer"}
+          >
+            { toggle ? <IoSunny /> : <IoMoon /> }
         </Box>
       </Box>
     </>
