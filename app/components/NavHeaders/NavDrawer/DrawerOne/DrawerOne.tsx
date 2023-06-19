@@ -22,7 +22,7 @@ import { HamburgerIcon } from '@chakra-ui/icons';
 
 function DrawerOne() {
 
-    const btnRef = React.useRef ();
+    const btnRef = React.useRef<HTMLButtonElement | null>(null);
 
     const { isOpen, onOpen, onClose } = useDisclosure ();
 
