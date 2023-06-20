@@ -6,65 +6,89 @@ import {
   Input,
   Center,
   HStack,
-  Popover,
   InputGroup,
-  PopoverHeader,
-  PopoverContent,
-  PopoverTrigger,
   InputLeftElement,
+  Modal,
+  ModalOverlay,
+  ModalContent,
+  ModalBody,
+  FormControl,
+  useDisclosure,
+  Hide,
 } from '@chakra-ui/react';
-import XmPopover from './Popover';
+import XmModal from './Modal';
 import { SearchIcon } from '@chakra-ui/icons';
+import React from 'react';
 
 function NavSearchBar() {
 
+  const { isOpen, onOpen, onClose } = useDisclosure()
+
+
+  const initialRef = React.useRef(null)
+  const finalRef = React.useRef(null)
   return (
     <>
-      <Box display={{ base:'none', md:'flex' }} h='fit-content' cursor="pointer">
-        <Popover placement={'right-start'}>
-          <PopoverTrigger>
-            <Box bg='#000' px={2} borderRadius="15px" mr={4}>
-              <HStack spacing='5px'>
-                <Box pl={1}>
-                  <SearchIcon boxSize={4} color='white'/>
-                </Box>
-
-                <Box color="gray.200" fontSize={'16px'}>
-                  Search
-                </Box>
-                
-                <Box fontSize={15}>
-                  <Kbd>CTRL</Kbd> <Kbd>K</Kbd>
-                </Box>  
-              </HStack>
+      <Hide below='md'>
+        <Box 
+          onClick={onOpen}  
+          bg='#000' 
+          px={2} 
+          borderRadius="15px" 
+          mr={4} 
+          cursor={'pointer'} 
+          _hover={{ border:'2px',  borderColor:'#565872'}}
+        >
+          <HStack spacing='5px'>
+            <Box pl={1}>
+              <SearchIcon boxSize={4} color='white'/>
             </Box>
-          </PopoverTrigger>
 
-          <PopoverContent>
-            <PopoverHeader>
-              <InputGroup size='sm'>
-                <InputLeftElement h='full'>
-                  <Center>
-                    <Box>
-                      <SearchIcon boxSize={5}/>
-                    </Box>
-                  </Center>
-                </InputLeftElement>
-                <Input 
-                  size='md'
-                  variant='outlined'
-                  placeholder='Search' 
-                  bg={'blackAlpha.600'}
-                  borderRadius={'10px'}
-                />
-              </InputGroup>
-            </PopoverHeader>
-          </PopoverContent>
-        </Popover>
-      </Box>
+            <Box color="gray.200" fontSize={'16px'}>
+              Search
+            </Box>
+            
+            <Box fontSize={15}>
+              <Kbd>CTRL</Kbd> <Kbd>K</Kbd>
+            </Box>  
+          </HStack>
+        </Box>
+        <Modal
+          initialFocusRef={initialRef}
+          finalFocusRef={finalRef}
+          isOpen={isOpen}
+          onClose={onClose}
+        >
+          <ModalOverlay />
+          <ModalContent>
+            <ModalBody pb={6}>
+              <FormControl>
+                <InputGroup size='sm'>
+                  <InputLeftElement h='full'>
+                    <Center>
+                      <Box>
+                        <SearchIcon boxSize={5} color='black'/>
+                      </Box>
+                    </Center>
+                  </InputLeftElement>
+                  <Input 
+                    size='lg'
+                    bg='white'
+                    color={'black'}
+                    variant='outlined'
+                    placeholder='Search' 
+                    borderRadius={'10px'}
+                    ref={initialRef}
+                  />
+                </InputGroup>
+              </FormControl>
+            </ModalBody>
+          </ModalContent>
+        </Modal>
+      </Hide>
 
-      {/* This layout'll be displayed on small screen devices */}
-      <XmPopover />
+      {/* small screen display */}
+      <XmModal />
     </>
   )
 }

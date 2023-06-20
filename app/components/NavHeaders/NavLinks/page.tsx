@@ -4,12 +4,15 @@ import {
   Box,
   Menu,
   Link,
+  Show, 
+  Hide,
   Spacer,
+  Button,
   MenuItem,
   MenuList,
   MenuButton, 
   useColorMode, 
-  useColorModeValue
+  useColorModeValue,
 } from '@chakra-ui/react';
 import Links from './Links';
 import NextLink from "next/link"
@@ -29,12 +32,12 @@ function NavLinks() {
     <>
       <Links />
 
-      <Box display={{ base:'none', md:'flex' }} color="#fefefe">
+      <Show above='md'>
         <Menu>
-          <MenuButton>
-            7.x <ChevronDownIcon />
+          <MenuButton bg='transparent' as={Button} rightIcon={<ChevronDownIcon />}>
+            7.x
           </MenuButton>
-          <MenuList minWidth='240px' _expanded={{ bg: 'blackAlpha.400' }}>
+          <MenuList>
             <MenuItem >6.x</MenuItem>
             <MenuItem >5.x</MenuItem>
             <MenuItem >4.x</MenuItem>
@@ -42,28 +45,28 @@ function NavLinks() {
             <MenuItem>2.x</MenuItem>
             <MenuItem>1.x</MenuItem>
             <MenuItem>All versions</MenuItem>
-            <MenuItem ></MenuItem> 
           </MenuList>
-        </Menu>  
-      </Box>
-      <Spacer/>
+        </Menu>
+      
+        <Spacer/>
 
-      <Box color="#fefefe" p='2' gap={0.3} display={{ base:'none', md:'inline-list-item' }}  alignItems={'center'}>
-        <Box>
-          <Link as={NextLink} href='https://github.com/react-navigation' isExternal>
-            GitHub <ExternalLinkIcon mx='2px'/>
-          </Link>
+        <Box color="#fefefe" p='2' gap={0.3} display={{ md:'inline-list-item' }}  alignItems={'center'}>
+          <Box>
+            <Link as={NextLink} href='https://github.com/react-navigation' isExternal>
+              GitHub <ExternalLinkIcon mx='2px'/>
+            </Link>
+          </Box>
+          <Box
+            px={5}
+            onClick={() =>{
+              toggleColorMode();
+              setToggle(!toggle);}}
+            cursor={"pointer"}
+            >
+              { toggle ? <IoSunny /> : <IoMoon /> }
+          </Box>
         </Box>
-        <Box
-          px={5}
-          onClick={() =>{
-            toggleColorMode();
-            setToggle(!toggle);}}
-          cursor={"pointer"}
-          >
-            { toggle ? <IoSunny /> : <IoMoon /> }
-        </Box>
-      </Box>
+      </Show>
     </>
   )
 }

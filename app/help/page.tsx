@@ -9,7 +9,7 @@ function help() {
   return (
     <Layout hideNavbarAndFooter={false}>
       <Flex w={'100vw'} h={'fit-content' } color="#fefefe" bg={'#1c1e21'} flexDir={'column'} pt={'10em'}>
-        <Flex flexDir={'column'} gap={5} px={{ base:'1.5em', md:'8em' }}>
+        <Flex flexDir={'column'} gap={5} px={{ base:'1.5em', md:'8em' }} w={'100vw'}>
           <Box>
             <Heading fontSize={"22px"}>Need help?</Heading>
           </Box>

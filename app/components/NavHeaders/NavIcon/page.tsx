@@ -13,14 +13,14 @@ function NavIcon() {
 
   return (
     <>
-        <Box p='2' display={'inline-list-item'} alignItems={'center'}>
-          <IconButton aria-label='logo' borderRadius={'full'} size={'sm'}>
-            <Link as={NextLink} href='/'><SiSemanticuireact size={'full'}/></Link>
-          </IconButton>
-          <Box ml='3' color="#fefefe">
-            React Navigation
-          </Box>
+      <Box p='2' display={'inline-list-item'} alignItems={'center'}>
+        <IconButton aria-label='logo' borderRadius={'full'} size={'xs'}>
+          <Link as={NextLink} href='/'><SiSemanticuireact size={50}/></Link>
+        </IconButton>
+        <Box ml='3' color="#fefefe">
+          React Navigation
         </Box>
+      </Box>
     </>
   )
 }
