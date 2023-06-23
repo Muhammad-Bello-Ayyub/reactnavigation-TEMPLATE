@@ -1,3 +1,5 @@
+'use client'
+
 import Breadcrumbs from './GettingStartedGuide/Breadcrumb'
 import { Flex, Box } from '@chakra-ui/react'
 import GettingStarted from './GettingStartedGuide/Main'

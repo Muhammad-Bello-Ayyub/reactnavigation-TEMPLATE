@@ -1,3 +1,5 @@
+'use client'
+
 import { useState } from 'react';
 import { Box, Text, IconButton, Tooltip } from '@chakra-ui/react';
 import { MdContentCopy } from 'react-icons/md';

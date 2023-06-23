@@ -1,3 +1,5 @@
+'use client'
+
 import { Box, Card, CardBody, CardHeader, Heading, Link, Text } from "@chakra-ui/react"
 
 function RightContent() {

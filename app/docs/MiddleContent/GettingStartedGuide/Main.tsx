@@ -1,3 +1,5 @@
+'use client'
+
 import NextLink from 'next/link'
 import styles from '../styles.module.css'
 import { EditIcon } from '@chakra-ui/icons';

@@ -1,3 +1,5 @@
+'use client'
+
 import { useState } from 'react';
 import { CopyIcon } from '@chakra-ui/icons';
 import styles from './../../styles.module.css'
