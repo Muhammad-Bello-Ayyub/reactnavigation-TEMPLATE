@@ -15,7 +15,8 @@ function NavIcon() {
     <>
       <Box p='2' display={'inline-list-item'} alignItems={'center'}>
         <IconButton aria-label='logo' borderRadius={'full'} size={'xs'}>
-          <Link as={NextLink} href='/'><SiSemanticuireact size={50}/></Link>
+          {/* <Link as={NextLink} href='/'><SiSemanticuireact size={50}/></Link> */}
+          LOGO
         </IconButton>
         <Box ml='3' color="#fefefe">
           React Navigation
