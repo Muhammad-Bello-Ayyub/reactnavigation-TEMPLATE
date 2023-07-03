@@ -43,7 +43,7 @@ function HeroMainPage() {
         </Flex>
         <Flex w={'100vw'} color="#fefefe">
             <Container pt={'3em'} pb={'5.5em'} maxW='container.md'>
-                <Box fontSize={{ base:'20px', md:'22px' }} bg={'#414360'} p={4} borderRadius={5} textAlign={'center'}>💡 Coming from an older version? Check out our <Link>migration guides.</Link> </Box>
+                <Box fontSize={{ base:'20px', md:'22px' }} bg={'#414360'} p={4} borderRadius={5} textAlign={'center'}>💡 Coming from an older version? Check out our <Link href='/docs' _hover={{ textDecoration: "none" }}>migration guides.</Link> </Box>
             </Container>
         </Flex>
     </Flex>

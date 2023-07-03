@@ -6,17 +6,17 @@ function Links() {
     return (
         <Box gap={4} display={{ base:'none', md:'flex' }} color="#fefefe">
             <Box>
-                <Link as={NextLink} href='/docs'>
+                <Link as={NextLink} href='/docs' _hover={{ textDecoration: "none" }}>
                     Docs
                 </Link>
             </Box>
             <Box>
-                <Link as={NextLink} href='/blog'>
+                <Link as={NextLink} href='/blog' _hover={{ textDecoration: "none" }}>
                     Blog
                 </Link>
             </Box>
             <Box>
-                <Link as={NextLink} href='/help'>
+                <Link as={NextLink} href='/help' _hover={{ textDecoration: "none" }}>
                     Help
                 </Link>
             </Box>

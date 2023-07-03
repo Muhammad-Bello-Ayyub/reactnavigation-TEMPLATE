@@ -1,4 +1,4 @@
-// 'use client'
+'use client'
 
 import Image from "next/image";
 import { useState } from "react";
@@ -91,8 +91,6 @@ function ContributorsAvatar() {
                src={contributor.img}
                width={50}
                height={50}
-               layout="responsive"
-               objectFit="cover"
                style={{ borderRadius: "3px", cursor:"pointer" }}
             />
          </Box>
