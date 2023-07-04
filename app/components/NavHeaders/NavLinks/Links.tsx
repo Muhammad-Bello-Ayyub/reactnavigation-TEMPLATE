@@ -11,7 +11,7 @@ function Links() {
                 </Link>
             </Box>
             <Box>
-                <Link as={NextLink} href='/blog' _hover={{ textDecoration: "none" }}>
+                <Link as={NextLink} href='https://reactnavigation.org/blog' _hover={{ textDecoration: "none" }}>
                     Blog
                 </Link>
             </Box>
